@@ -1,0 +1,16 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: EHR-SYSTEM
+  datasource:
+    url: jdbc:postgresql://localhost:5432/ehr_db
+    username: postgres
+    password: stan
+    driver-class-name: org.postgresql.Driver
+  
+  jpa:
+    hibernate:  
+      ddl-auto: update
+    show-sql: true
+  
