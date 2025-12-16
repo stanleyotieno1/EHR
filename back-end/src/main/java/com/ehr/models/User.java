@@ -48,6 +48,9 @@ public class User {
     @UpdateTimestamp
     private LocalDateTime updatedAt;
 
+    @OneToOne(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private Patient patient;
+
     // JPA ensures role is always "USER" for patients
     @PrePersist
     @PreUpdate

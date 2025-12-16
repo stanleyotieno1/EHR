@@ -2,6 +2,7 @@ package com.ehr.service;
 
 import com.ehr.dto.UserRegistrationDto;
 import com.ehr.models.User;
+import com.ehr.models.Patient;
 import com.ehr.repository.UserRepository;
 import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
@@ -40,6 +41,10 @@ public class UserService {
         user.setPasswordHash(passwordEncoder.encode(dto.getPassword()));
         user.setFirstName(dto.getFirstName());
         user.setLastName(dto.getLastName());
+
+        Patient patient = new Patient();
+        patient.setUser(user);
+        user.setPatient(patient);
 
         return userRepository.save(user);
     }
