@@ -1,0 +1,17 @@
+# Claude Code Analysis
+CLAUDE.MD
+
+# Environment variables
+.env
+.env.local
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Misc
+cookiejar.txt
