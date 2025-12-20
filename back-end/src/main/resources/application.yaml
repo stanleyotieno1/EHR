@@ -1,12 +1,12 @@
 server:
-  port: 8000
+  port: 8084
 spring:
   application:
     name: EHR-SYSTEM
   datasource:
     url: ${DB_URL:jdbc:postgresql://localhost:5432/ehr_db}
     username: ${DB_USERNAME:postgres}
-    password: ${DB_PASSWORD:postgres}
+    password: ${DB_PASSWORD:stan}
     driver-class-name: org.postgresql.Driver
 
   jpa:
